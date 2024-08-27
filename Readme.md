@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ivan shapkov](https://up.htmlacademy.ru/htmlcss-individual/2/user/2520257).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
