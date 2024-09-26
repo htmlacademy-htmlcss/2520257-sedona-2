@@ -66,7 +66,7 @@ body {
 }
 
 .main-header-logo {
-  margin-bottom: -15px;
+  margin-bottom: -1px;
 }
 
 .navigation-link-current {
@@ -367,7 +367,8 @@ body {
   color: #ffffff;
 }
 
-.subscribe-img .subscribe-title-description, .subscribe-img .subscribe-title {
+.subscribe-img .subscribe-title-description,
+.subscribe-img .subscribe-title {
   color: #ffffff;
 }
 
@@ -388,12 +389,18 @@ body {
 .subscribe-form .subscribe-field {
   padding: 14px 20px;
   width: 452px;
-  border-radius: 4px 0 0 4px ;
+  border-radius: 4px 0 0 4px;
   border: none;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  background-color: #f2f2f2;
 }
+
+.subscribe-form .subscribe-field-img {
+  background-color: #ffffff;
+}
+
 
 /* Catalog */
 
@@ -406,6 +413,7 @@ body {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  gap: 30px;
 }
 
 .catalog-filter-list {
@@ -420,6 +428,7 @@ body {
   width: 155px;
   border: 0;
   margin: 0;
+  padding: 0;
 }
 
 .catalog-products {
@@ -431,18 +440,32 @@ body {
   background-repeat: no-repeat;
 }
 
+.breadcrumbs {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font-size: 16px;
+}
+
 .main-inner-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 8px;
+  text-align: start;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  text-align: start;
 }
 
 .catalog-filter-item {
@@ -452,10 +475,13 @@ body {
   margin-right: 70px;
 }
 
-.catalog-filter-buttons {
+.filter-group-price {
   margin-left: auto;
 }
 
+.catalog-filter-buttons {
+  margin-top: auto;
+}
 
 .button-apply {
   font-size: 16px;
@@ -464,16 +490,18 @@ body {
   height: 36px;
   background-color: #82b3d3;
   padding: 8px 50px 8px 50px;
-  color: #ffffff;
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
+  margin-bottom: 32px;
 }
 
 .button-reset {
   background-color: transparent;
   font-size: 16px;
   line-height: 20px;
+  padding: 8px 50px 8px 50px;
+  text-transform: uppercase;
   width: 191px;
   height: 36px;
   border: none;
@@ -481,20 +509,63 @@ body {
 
 /* catalog-sorting */
 
+.sorting-select-control {
+  padding: 12px 20px;
+  margin: 0;
+  min-width: 292px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+}
+
+.catalog-cards {
+  padding: 50px 70px 60px;
+}
+
+.catalog-sorting-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 0;
+  flex-grow: 1;
+  text-transform: uppercase;
+  text-align: left;
+}
+
 .catalog-sorting-field {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 55px 70px;
   border: 0;
-  width: 1060px;
+  margin-bottom: 40px;
+  gap: 70px;
+  align-items: center;
 }
 
 .sorting-buttons {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  gap: 8px;
+}
+
+.sort-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+}
+
+.sort-button-selected {
+  border-color: #000000;
 }
 
 /* catalog-list */
@@ -568,11 +639,9 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #82b3d3;
-  box-sizing: border-box;
   border-radius: 4px;
   min-width: 60px;
   min-height: 60px;
-  border-radius: 4px;
   border: none;
 }
 
@@ -614,6 +683,7 @@ body {
   padding: 45px 70px 35px;
   background-color: #ffffff;
   margin: 0 auto;
+  align-items: center;
 }
 
 .socials-list {
@@ -622,13 +692,21 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  max-width: 150px;
 }
+
+.socials-link {
+  width: 47px;
+  height: 40px;
+}
+
 
 .footer-contacts-address {
   width: 400px;
 }
 
-.footer-logo {
+.academy-logo {
+  align-items: center;
 }
 
 .vk-logo {
