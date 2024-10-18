@@ -253,17 +253,18 @@ body {
 .navigation-user .navigation-link {
   min-width: 18px;
   min-height: 18px;
+  padding: 13px;
 }
 
 .navigation-user .navigation-item:nth-child(1) .navigation-link {
   background-image: url("../images/header/finder.svg");
-  background-position: 23px center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .navigation-user .navigation-item:nth-child(2) .navigation-link {
   background-image: url("../images/header/like.svg");
-  background-position: 20px center;
+  background-position: center;
   background-repeat: no-repeat;
   margin-right: 20px;
   position: relative;
@@ -272,7 +273,7 @@ body {
 .likes-number {
   position: absolute;
   right: 5px;
-  top: 10px;
+  top: 2px;
   max-width: 20px;
   max-height: 20px;
   padding: 5px 4px;
@@ -975,8 +976,8 @@ body {
 
 .sort-button {
   display: inline-block;
-  min-width: 45px;
-  min-height: 45px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   background-repeat: no-repeat;
