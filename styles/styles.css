@@ -777,6 +777,7 @@ body {
   position: absolute;
   top: 24px;
   right: 20px;
+  font-weight: 400;
   transform: translateY(-50%);
   color: #000000;
   opacity: 0.3;
@@ -814,6 +815,7 @@ body {
   margin-bottom: 37px;
   padding: 0;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .breadcrumbs-item {
@@ -1022,11 +1024,13 @@ body {
 
 .catalog-card-descriprion {
   margin: 0;
+  font-weight: 400;
 }
 
 .catalog-card-price {
   margin: 0;
   margin-left: auto;
+  font-weight: 400;
 }
 
 .catalog-card-link-detailed {
