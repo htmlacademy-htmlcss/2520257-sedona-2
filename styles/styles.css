@@ -226,8 +226,12 @@ body {
   text-transform: capitalize;
 }
 
-.navigation-link:hover {
+.navigation-link[href]:hover {
   background-color: rgba(131, 179, 211, 0.3);
+}
+
+.navigation-link:not([href]):hover {
+  cursor: text;
 }
 
 .navigation-link:focus-visible {
@@ -241,7 +245,7 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.navigation-link:active {
+.navigation-link[href]:active {
   background-color: #83b3d3;
   opacity: 0.3;
 }
@@ -316,19 +320,6 @@ body {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-}
-
-.advantages-list > .advantages-item:first-child,
-.advantages-list > .advantages-item:last-child {
-  background-color: #82b3d3;
-}
-
-.advantages-item:nth-child(even) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-item:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-wrapper {
@@ -511,7 +502,7 @@ body {
   margin: 0 auto;
   font-size: 20px;
   line-height: 36px;
-  max-width: 376px;
+  min-width: 376px;
   background-color: #756157;
 }
 
@@ -892,7 +883,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   margin: 0;
-  max-width: 500px;
+  max-width: 450px;
   text-transform: uppercase;
 }
 
@@ -901,7 +892,6 @@ body {
   padding: 12px 20px;
   padding-right: 45px;
   margin-left: auto;
-  margin-bottom: auto;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   font-family: inherit;
@@ -1119,11 +1109,13 @@ body {
   justify-content: center;
   min-width: 60px;
   min-height: 60px;
+  padding: 7px;
   outline: none;
   text-decoration: none;
   color: #ffffff;
   background-color: #82b3d3;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .pagination-dots {
@@ -1155,6 +1147,24 @@ body {
 .background-color-dark {
   background-color: #82b3d3;
 }
+
+/*
+
+Дополнительное решение через even, odd.
+
+.advantages-list > .advantages-item:first-child,
+.advantages-list > .advantages-item:last-child {
+  background-color: #82b3d3;
+}
+
+.advantages-item:nth-child(even),
+.services-item:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+} */
 
 /* footer */
 
