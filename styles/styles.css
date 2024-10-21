@@ -256,13 +256,13 @@ body {
   padding: 13px;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-user .navigation-item:nth-child(1) {
   background-image: url("../images/header/finder.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-user .navigation-item:nth-child(2) {
   background-image: url("../images/header/like.svg");
   background-position: center;
   background-repeat: no-repeat;
