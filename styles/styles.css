@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0;
+  min-width: 1280px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -27,6 +28,7 @@ body {
   text-align: center;
   color: #333333;
   background-color: #f2f2f2;
+
 }
 
 .container {
@@ -84,7 +86,7 @@ body {
 
 .navigation-button:not(:disabled):hover,
 .hotels-search-button:not(:disabled):hover,
-.catalog-card-link-detailed:not(:disabled):hover {
+.catalog-card-link-detailed:hover {
   background-color: #615048;
 }
 
@@ -96,24 +98,27 @@ body {
 
 .navigation-button:not(:disabled):active,
 .hotels-search-button:not(:disabled):active,
-.catalog-card-link-detailed:not(:disabled):active {
+.catalog-card-link-detailed:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .subscribe-button:disabled,
 .button-apply:disabled,
-.catalog-card-button-fav:disabled .navigation-button:disabled,
+.catalog-card-button-fav:disabled,
+.navigation-button:disabled,
 .hotels-search-button:disabled,
-.catalog-card-link-detailed {
+.modal-search-button:disabled,
+.catalog-card-button-selected:disabled,
+.tooltip-button:disabled {
   background-color: #e5e5e5;
   cursor: default;
 }
 
-.subscribe-button:hover,
-.catalog-card-button-fav:hover,
+.subscribe-button:not(:disabled):hover,
+.catalog-card-button-fav:not(:disabled):hover,
 .pagination-link:hover,
-.button-apply:hover {
+.button-apply:not(:disabled):hover {
   background-color: #68a2ca;
 }
 
@@ -124,15 +129,15 @@ body {
   background-color: #68a2ca;
 }
 
-.subscribe-button:active,
-.catalog-card-button-fav:active,
+.subscribe-button:not(:disabled):active,
+.catalog-card-button-fav:not(:disabled):active,
 .pagination-link:active,
-.button-apply:active {
+.button-apply:not(:disabled):active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.catalog-card-button-selected:hover {
+.catalog-card-button-selected:not(:disabled):hover {
   background-color: #6c9e42;
 }
 
@@ -140,12 +145,12 @@ body {
   background-color: #6c9e42;
 }
 
-.catalog-card-button-selected:active {
+.catalog-card-button-selected:not(:disabled):active {
   background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-reset:hover {
+.button-reset:not(:disabled):hover {
   opacity: 0.6;
 }
 
@@ -153,22 +158,13 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.button-reset:active {
+.button-reset:not(:disabled):active {
   opacity: 0.3;
 }
 
-.pagination-current:hover,
-.pagination-current:focus-visible,
-.pagination-current:active {
-  background-color: #f2f2f2;
-  color: #000000;
-}
-
-.pagination-next:hover,
-.pagination-next:focus-visible,
-.pagination-next:active {
-  background-color: transparent;
-  color: #000000;
+.button-reset:disabled {
+  cursor: default;
+  opacity: 0.3;
 }
 
 /* Navigation */
@@ -536,7 +532,7 @@ body {
 /* subscribe */
 
 .subscribe {
-  padding: 98px;
+  padding: 96px;
   padding-bottom: 104px;
 }
 
@@ -784,14 +780,23 @@ body {
   cursor: pointer;
 }
 
+.range-toggle:not(:disabled):hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
 .range-toggle:focus-visible {
   outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:active {
+.range-toggle:not(:disabled):active {
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:disabled {
+  background-color: #e5e5e5;
+  cursor: default;
 }
 
 .toggle-min {
@@ -912,6 +917,7 @@ body {
   margin: 0;
   max-width: 450px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .sorting-select-control {
@@ -1010,8 +1016,10 @@ body {
   width: 1060px;
   gap: 20px;
   grid-template-columns: repeat(3, 340px);
-  margin-bottom: 79px;
+  margin-bottom: 39px;
   padding: 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .catalog-card {
@@ -1161,6 +1169,21 @@ body {
   color: #000000;
 }
 
+
+.pagination-current:hover,
+.pagination-current:focus-visible,
+.pagination-current:active {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-next:hover,
+.pagination-next:focus-visible,
+.pagination-next:active {
+  background-color: transparent;
+  color: #000000;
+}
+
 /* footer */
 
 .page-footer {
@@ -1236,7 +1259,7 @@ body {
   background-color: rgba(104, 162, 202, 0.3);
 }
 
-.footer-contacts-address:hover {
+.contacts-phone:hover {
   color: #756157;
 }
 
@@ -1247,7 +1270,7 @@ body {
   border-radius: 4px;
 }
 
-.footer-contacts-address:active {
+.contacts-phone:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
@@ -1366,6 +1389,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .modal-date-description {
@@ -1389,6 +1413,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  color: #000000;
 }
 
 .modal-label-childrens {
@@ -1491,7 +1516,7 @@ body {
   background-color: #83b3d3;
 }
 
-.modal-search-button:hover {
+.modal-search-button:not(:disabled):hover {
   background-color: #68a2ca;
 }
 
@@ -1499,7 +1524,7 @@ body {
   background-color: #68a2ca;
 }
 
-.modal-search-button:active {
+.modal-search-button:not(:disabled):active {
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1551,7 +1576,7 @@ body {
   transform: translateX(-50%) rotate(45deg);
 }
 
-.tooltip-button:hover + .tooltip-text,
+.tooltip-button:not(:disabled):hover + .tooltip-text,
 .tooltip-button:focus-visible + .tooltip-text {
   display: block;
 }
@@ -1568,4 +1593,29 @@ body {
 
 .input-field[type=number] {
   -moz-appearance: textfield;
+}
+
+/* дополнительный класс для неактивных ссылок */
+
+.disabled,
+.catalog-card-link-detailed.disabled:hover,
+.catalog-card-link-detailed.disabled:active,
+.pagination-link.disabled:hover,
+.pagination-link.disabled:active,
+.navigation-link.disabled:hover,
+.navigation-link.disabled:active,
+.navigation-button.disabled:hover,
+.navigation-button.disabled:active {
+  background-color: #e5e5e5;
+  cursor: default;
+  color: #ffffff;
+}
+
+.sort-button.disabled,
+.sort-button.disabled:hover,
+.sort-button.disabled:active {
+  background-color: transparent;
+  border-color: #e5e5e5;
+  opacity: 0.3;
+  cursor: default;
 }
